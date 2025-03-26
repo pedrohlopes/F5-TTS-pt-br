@@ -1252,6 +1252,7 @@ def get_checkpoints_project(project_name, is_gradio=True):
 
     if os.path.isdir(path_project_ckpts):
         files_checkpoints = glob(os.path.join(path_project_ckpts, project_name, "*.pt"))
+
         # Separate pretrained and regular checkpoints
         pretrained_checkpoints = [f for f in files_checkpoints if "pretrained_" in os.path.basename(f)]
         regular_checkpoints = [
